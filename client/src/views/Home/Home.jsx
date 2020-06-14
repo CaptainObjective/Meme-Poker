@@ -1,12 +1,10 @@
 import React from "react";
-import CreateNewRoom from "../../Components/CreateNewRoom/";
+import RegisterForm from "../../Components/RegisterForm/RegisterForm";
 
 const Home = () => {
-  console.log(sdfknfdk);
   return (
     <div>
-      Home View
-      <CreateNewRoom />
+      <RegisterForm />
     </div>
   );
 };
