@@ -1,12 +1,8 @@
 import React from "react";
-import RegisterForm from "../../Components/RegisterForm/RegisterForm";
+// import RegisterForm from "../../Components/RegisterForm/RegisterForm";
 
 const Home = () => {
-  return (
-    <div>
-      <RegisterForm />
-    </div>
-  );
+  return <div>{/* <RegisterForm /> */}</div>;
 };
 
 export default Home;
