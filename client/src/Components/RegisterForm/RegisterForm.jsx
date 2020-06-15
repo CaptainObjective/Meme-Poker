@@ -10,6 +10,7 @@ const RegisterForm = () => {
     const addUser = {
       email: data.email,
       username: data.username,
+      lastname: data.lastname,
       password: data.password,
       confirmpassword: data.confirmpassword,
     };
