@@ -6,7 +6,7 @@ import photo2 from "../../assets/images/pngfind.com-memes-png-401574.png";
 
 import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
-import CssBaseline from "@material-ui/core/CssBaseline";
+// import CssBaseline from "@material-ui/core/CssBaseline";
 import TextField from "@material-ui/core/TextField";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
@@ -17,6 +17,8 @@ import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
+import { withStyles } from "@material-ui/core/styles";
+
 const yup = require("yup");
 
 const defaultProps = {
@@ -44,6 +46,22 @@ function Copyright() {
     </Typography>
   );
 }
+
+const GlobalCss = withStyles({
+  // @global is handled by jss-plugin-global.
+  "@global": {
+    // You should target [class*="MuiButton-root"] instead if you nest themes.
+    ".MuiFormLabel-root": {
+      color: "#FFF",
+    },
+    ".MuiOutlinedInput-notchedOutline": {
+      borderColor: "#FFF",
+    },
+    ".MuiCheckbox-root": {
+      color: "#FFF",
+    },
+  },
+})(() => null);
 
 const useStyles = makeStyles((theme) => ({
   // .MuiFormLabel-root{color:"#FFF"},
@@ -77,7 +95,6 @@ const useStyles = makeStyles((theme) => ({
     height: theme.spacing(6),
   },
   input: {
-    background: "#FFFF",
     color: "white",
   },
   form: {
@@ -110,7 +127,8 @@ const Body = ({ button }) => {
   });
   return (
     <Container component="main" maxWidth="xs" className={classes.block}>
-      <CssBaseline />
+      {/* <CssBaseline /> */}
+      <GlobalCss />
       <Box borderRadius="borderRadius" {...defaultProps}>
         <div className={classes.paper}>
           <Grid container spacing={1}>
