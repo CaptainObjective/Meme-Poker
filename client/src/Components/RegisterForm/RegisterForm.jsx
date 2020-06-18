@@ -1,7 +1,7 @@
 import React from "react";
-import axios from "axios";
+// import axios from "axios";
 
-import Form from "./Form";
+import Form from "./Form.jsx";
 
 const RegisterForm = () => {
   // const [user, setUser] = useState({ email: null, username: null, password: null, confirmpassword: null });
