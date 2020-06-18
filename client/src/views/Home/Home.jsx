@@ -4,7 +4,8 @@ import RegisterForm from "../../Components/RegisterForm/RegisterForm.jsx";
 const Home = () => {
   return (
     <div>
-      <RegisterForm />
+      <h1>home</h1>
+      {/* <RegisterForm /> */}
     </div>
   );
 };
