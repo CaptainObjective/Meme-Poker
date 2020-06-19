@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
 const Footer = () => {
   const classes = useStyles();
 
-  return <div className={classes.footer}>Footer</div>;
+  return <div className={classes.footer}></div>;
 };
 
 export default Footer;

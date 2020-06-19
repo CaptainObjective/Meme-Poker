@@ -1,10 +1,24 @@
 import React from 'react';
 import { Redirect, useParams } from 'react-router-dom';
-import { Container, Grid, Typography, CssBaseline, Paper, TextField, Button, Avatar } from '@material-ui/core';
+import { Container, Grid, TextField, Button } from '@material-ui/core';
+import { withStyles } from '@material-ui/core/styles';
 
-import Cards from 'Components/Cards';
 import { useUserContext } from 'Contexts/UserContext';
 import roomStyles from './RoomStyles';
+import SendIcon from '@material-ui/icons/Send';
+
+const GlobalCss = withStyles({
+  // @global is handled by jss-plugin-global.
+  '@global': {
+    // You should target [class*="MuiButton-root"] instead if you nest themes.
+    '.MuiButton-root': {
+      fontSize: '1rem',
+    },
+    '.MuiInputBase-input ': { color: '#FFFF' },
+    '.MuiFormLabel-root': { color: '#FFFF' },
+    '.MuiOutlinedInput-notchedOutline ': { borderColor: '#FFFF' },
+  },
+})(() => null);
 
 const Room = () => {
   const classes = roomStyles();
@@ -16,35 +30,17 @@ const Room = () => {
 
   return (
     <Container fixed>
-      <CssBaseline />
-      <Grid container spacing={6} className={classes.grid}>
-        <Grid container item sm={8} className={classes.main}>
-          <Grid container item xs={12} className={classes.mainTop}>
-            <Paper elevation={0} className={classes.userName} variant="outlined">
-              <Avatar>H</Avatar>
-            </Paper>
-            <Button variant="contained" color="primary" size="small" fullWidth>
-              Show votes
-            </Button>
-            <TextField variant="outlined" label="Task name" fullWidth />
-            <Button variant="contained" color="secondary" size="small" fullWidth>
-              Clear votes
-            </Button>
-          </Grid>
-          <Grid item xs={12}>
-            <Paper className={classes.cards}>
-              Main View <br /> <Cards />
-            </Paper>
-          </Grid>
-        </Grid>
-        <Grid container item sm={4}>
-          <Grid item xs={12}>
-            <Paper className={classes.results}>
-              <Grid container>
-                <Typography variant="h5">Results</Typography>
-              </Grid>
-            </Paper>
-          </Grid>
+      <GlobalCss />
+
+      <Grid container spacing={4} className={classes.grid}>
+        <Grid container item sm={2} xs={12}></Grid>
+        <Grid container item sm={4} xs={12} className={classes.main}></Grid>
+        <Grid container item sm={4} xs={12} className={classes.join}>
+          <Grid container item sm={2} xs={12}></Grid>
+          <TextField variant="outlined" label="ROOM'S NUMBER" className={classes.text} />
+          <Button variant="contained" color="primary" size="small" fullWidth>
+            <SendIcon className={classes.buttonIcon} />
+          </Button>
         </Grid>
       </Grid>
     </Container>
@@ -52,12 +48,3 @@ const Room = () => {
 };
 
 export default Room;
-
-/* 
-template (header, footer)
-  main
-    (userInfo
-    taskInput
-    cards)
-    (results)
-*/
