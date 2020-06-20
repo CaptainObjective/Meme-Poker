@@ -4,28 +4,13 @@ import JoinRoom from 'Components/JoinRoom/JoinRoom';
 import Grid from '@material-ui/core/Grid';
 import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
-import { Button } from '@material-ui/core';
 import StyleHome from './Style/StyleHome';
-import { withStyles } from '@material-ui/core/styles';
-
-const GlobalCss = withStyles({
-  '.MuiFormLabel-root': {
-    color: '#FFF',
-  },
-  '.MuiOutlinedInput-notchedOutline': {
-    borderColor: '#FFF',
-  },
-  '.MuiCheckbox-root': {
-    color: '#FFF',
-  },
-})(() => null);
 
 const Home = () => {
   const classes = StyleHome();
   return (
     <div>
-      <Grid container fixed className={classes.grid}>
-        <GlobalCss />
+      <Grid container className={classes.grid}>
         <Grid container item sm={8} xs={12} className={classes.root}>
           <Grid container item sm={12} xs={12} className={classes.header}>
             <Grid item sm={2} xs={12} className={classes.header__avatar}>
@@ -37,7 +22,6 @@ const Home = () => {
                 <Grid item sm={12} xs={12}>
                   <Typography className={classes.header__text_head}>Name</Typography>
                 </Grid>
-
                 <Grid item sm={12} xs={12} className={classes.header__text_main}>
                   <Typography>
                     Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of

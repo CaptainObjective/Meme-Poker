@@ -2,13 +2,12 @@ import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
-import Home from '../../views/Home/Home';
 import { Grid, Button } from '@material-ui/core';
 import StyleHome from 'views/Home/Style/StyleHome';
 
-// const useStyles = makeStyles((theme) => ({
-//   margin: '4px',
-// }));
+const useStyles = makeStyles((theme) => ({
+  margin: '4px',
+}));
 
 const JoinRoom = () => {
   const classes = StyleHome();
@@ -24,9 +23,8 @@ const JoinRoom = () => {
   return (
     <>
       <Grid item sm={2} xs={4} className={classes.game__wrapper__footer_button}>
-        <form onSubmit={connectToRoom} noValidate autoComplete="off" fullWidth>
+        <form onSubmit={connectToRoom} noValidate autoComplete="off">
           <TextField
-            disableUnderline="true"
             margin="none"
             size="small"
             label="room's number"
@@ -36,7 +34,6 @@ const JoinRoom = () => {
             type="text"
             value={roomId}
             onChange={onInputHandler}
-            multiline="false"
           />
           {/* <Home onClickFn={onInputHandler}></Home> */}
         </form>

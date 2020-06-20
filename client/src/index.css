@@ -11,12 +11,3 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
-
-.MuiLink-underlineNone:hover {
-  underline: 'none';
-  text-decoration-line: 'none';
-}
-
-.MuiButton-contained:hover {
-  background-color: 'yellow';
-}
