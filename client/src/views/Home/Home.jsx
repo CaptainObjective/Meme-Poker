@@ -2,20 +2,31 @@ import React from 'react';
 
 import CreateNewRoom from 'Components/CreateNewRoom/';
 import JoinRoom from 'Components/JoinRoom/JoinRoom';
-import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
 import { Button } from '@material-ui/core';
 import StyleHome from './Style/StyleHome';
-import { useUserContext } from '../../Contexts/UserContext';
-import TextField from '@material-ui/core/TextField';
+import { withStyles } from '@material-ui/core/styles';
+
+const GlobalCss = withStyles({
+  '.MuiFormLabel-root': {
+    color: '#FFF',
+  },
+  '.MuiOutlinedInput-notchedOutline': {
+    borderColor: '#FFF',
+  },
+  '.MuiCheckbox-root': {
+    color: '#FFF',
+  },
+})(() => null);
 
 const Home = ({ onclickFn }) => {
   const classes = StyleHome();
   return (
     <div>
       <Grid container fixed className={classes.grid}>
+        <GlobalCss />
         <Grid container item sm={8} xs={12} className={classes.root}>
           <Grid container item sm={12} xs={12} className={classes.header}>
             <Grid item sm={2} xs={12} className={classes.header__avatar}>
@@ -24,7 +35,7 @@ const Home = ({ onclickFn }) => {
 
             <Grid item sm={10} xs={12} className={classes.header__textavatar}>
               <Grid item sm={12} xs={12} className={classes.header__text}>
-                <Grid item sm={12} xs={12} className={classes.header__text_head}>
+                <Grid item sm={12} xs={12}>
                   <Typography className={classes.header__text_head}>Name</Typography>
                 </Grid>
 
@@ -38,35 +49,44 @@ const Home = ({ onclickFn }) => {
             </Grid>
           </Grid>
 
-          <Grid container item sm={12} xs={12} className={classes.footer}>
-            {' '}
-            {/*brown*/}
-            <Grid container item sm={10} xs={12} className={classes.footer__main}>
-              {' '}
-              {/*white*/}
-              <Grid container item sm={12} xs={12} className={classes.footer__subject}>
-                POINTING SESSION
+          <Grid container spacing={1} item sm={12} xs={12} className={classes.game__wrapper}>
+            <Grid container item sm={10} xs={12} className={classes.game__wrapper__header}>
+              <Grid item sm={12} xs={12}>
+                <Typography className={classes.game__wrapper__header__text_up} variant="subtitle1">
+                  POINTING SESSION
+                </Typography>
               </Grid>
-              <Grid container item sm={12} xs={12} fullWidth className={classes.button__text}>
-                <Grid item sm={5} xs={6} fullWidth className={classes.button__text2}>
-                  <Typography>CREATE NEW SESSION</Typography>
-                </Grid>
-                <Grid item sm={7} xs={6} fullWidth className={classes.button__text2}>
-                  <Typography>ADD ROOM'S NUMBER</Typography>
-                </Grid>
+            </Grid>
+            <Grid container item spacing={1} sm={10} xs={12}>
+              <Grid item sm={5} xs={5} className={classes.game__wrapper___text}>
+                <Typography className={classes.game__wrapper__header__text} variant="subtitle1">
+                  CREATE NEW SESSION
+                </Typography>
               </Grid>
-              <Grid container item sm={12} xs={12} className={classes.button__grid}>
-                <Grid item sm={5} xs={4}>
-                  <CreateNewRoom />
-                </Grid>
-                <Grid item sm={2} xs={4}>
-                  <JoinRoom />{' '}
-                </Grid>
-                <Grid item sm={5} xs={4}>
-                  <Button variant="contained" color="primary" disableElevation className={classes.button} fullWidth>
-                    JOIN SESSION
-                  </Button>
-                </Grid>
+              <Grid item sm={7} xs={7} className={classes.game__wrapper__text}>
+                <Typography className={classes.game__wrapper__header__text} variant="subtitle1">
+                  ADD ROOM'S NUMBER
+                </Typography>
+              </Grid>
+            </Grid>
+            <Grid spacing={1} container item sm={10} xs={12} className={classes.game__wrapper__footer}>
+              <Grid item sm={5} xs={4}>
+                <CreateNewRoom />
+              </Grid>
+              <Grid item sm={2} xs={4} className={classes.game__wrapper__footer_button}>
+                <JoinRoom />
+              </Grid>
+              <Grid item sm={5} xs={4}>
+                <Button
+                  variant="contained"
+                  color="primary"
+                  disableElevation
+                  fullWidth
+                  className={classes.game__wrapper__footer_button}
+                  type="submit"
+                >
+                  JOIN SESSION
+                </Button>
               </Grid>
             </Grid>
           </Grid>

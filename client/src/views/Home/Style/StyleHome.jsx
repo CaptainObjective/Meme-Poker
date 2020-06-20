@@ -14,27 +14,18 @@ const StyleHome = makeStyles((theme) => ({
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    // backgroundColor: theme.palette.grey.A400,
-    border: `2px solid ${theme.palette.primary.main}`,
     borderRadius: '8px',
     marginTop: theme.spacing(25),
     boxShadow: theme.shadows[10],
-    backgroundColor: 'red',
+    backgroundColor: theme.palette.grey.A400,
+    border: `3px solid ${theme.palette.primary.main}`,
   },
   grid: {
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'pink',
   },
-
-  footer: {
-    justifyContent: 'center',
-    marginTop: theme.spacing(3),
-    backgroundColor: 'blue',
-  },
-
-  header: { backgroundColor: 'green' },
-  header__avatar: { marginTop: theme.spacing(2), backgroundColor: 'white' },
+  header: { marginBottom: '30px' },
+  header__avatar: { marginTop: theme.spacing(2) },
   header__avatarIcon: {
     width: '95px',
     height: '95px',
@@ -43,64 +34,63 @@ const StyleHome = makeStyles((theme) => ({
 
   header__textavatar: {
     padding: '10px',
-    backgroundColor: 'gray',
   },
 
   header__text: {
-    border: `2px solid ${theme.palette.primary.main}`,
+    border: `1px solid ${theme.palette.primary.main}`,
     borderRadius: '6px',
     display: 'flex',
     flexDirection: 'column',
     padding: '10px',
-    backgroundColor: 'purple',
   },
 
   header__text_head: {
     color: '#FFFF',
     fontWeight: 'bold',
     fontSize: '25px',
-    backgroundColor: 'orange',
   },
 
   header__text_main: {
     color: 'white',
     fontSize: '5px',
-    backgroundColor: 'black',
   },
-  footer__main: { backgroundColor: 'white' },
-  footer__subject: { backgroundcolor: 'yellow' },
 
-  footer__subject: {
+  game__wrapper: {
+    direction: 'column',
+    alignItems: 'center',
     justifyContent: 'center',
-    color: 'white',
-    border: `2px solid #388E3C`,
-    fontSize: '24px',
+  },
+  game__wrapper__text: {
+    direction: 'row',
+    justify: 'center',
+    alignItems: 'center',
+  },
+
+  game__wrapper__header__text: {
+    color: '#FFFF',
+    display: 'flex',
+    justifyContent: 'center',
+    textAlign: 'center',
+    border: `1px solid ${theme.palette.primary.main}`,
     borderRadius: '4px',
-    backgroundColor: 'brown',
   },
-  button__grid: {
+  game__wrapper__header__text_up: {
+    color: '#FFFF',
     display: 'flex',
-    flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'purple',
+    borderRadius: '4px',
+    backgroundColor: '#388E3C',
+    height: '50px',
+    fontSize: '24px',
   },
-  button__text: {
+  game__wrapper__footer: {
     display: 'flex',
-    flexDirection: 'row',
+    displayFlex: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'yellow',
-    padding: theme.spacing(1),
-    marginTop: '3px',
-    marginBottom: '3px',
   },
-
-  button: {
-    color: 'white',
-    height: '4em',
-  },
-  test: { margin: theme.spacing(2) },
+  game__wrapper__footer_button: { color: '#FFFF' },
 }));
 
 export default StyleHome;

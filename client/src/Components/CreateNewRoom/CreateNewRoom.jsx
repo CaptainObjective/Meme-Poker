@@ -6,10 +6,9 @@ import { Button } from '@material-ui/core';
 const buttonStyles = makeStyles((theme) => ({
   button: {
     color: 'white',
-    height: '4em',
   },
 
-  link: { underline: 'none', outline: 'none' },
+  link: { underline: 'none' },
 }));
 
 const CreateNewRoom = () => {
@@ -19,7 +18,7 @@ const CreateNewRoom = () => {
 
   return (
     <>
-      <Link to={`/room/${sessionNumber}/join`}>
+      <Link to={`/room/${sessionNumber}/join`} className={classes.link}>
         <Button variant="contained" color="primary" disableElevation className={classes.button} fullWidth>
           START SESSION
         </Button>

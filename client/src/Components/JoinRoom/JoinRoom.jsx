@@ -1,27 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
-import Avatar from '@material-ui/core/Avatar';
-import Typography from '@material-ui/core/Typography';
-import { Button } from '@material-ui/core';
-import Modal from '@material-ui/core/Modal';
-import Backdrop from '@material-ui/core/Backdrop';
-import Fade from '@material-ui/core/Fade';
 import TextField from '@material-ui/core/TextField';
 
-import { useUserContext } from 'Contexts/UserContext';
-
 const useStyles = makeStyles((theme) => ({
-  test: { height: '100%' },
+  margin: '4px',
 }));
 
 const JoinRoom = () => {
   const classes = useStyles();
 
+  const [roomId, setRoomId] = useState('');
+  const { push } = useHistory();
+
+  const onInputHandler = ({ target: { value } }) => setRoomId(value);
+
+  const connectToRoom = () => {
+    push(`/room/${roomId}/join`);
+  };
+
   return (
     <>
-      <form noValidate autoComplete="off" fullWidth>
-        <TextField id="outlined-basic" label="Outlined" variant="outlined" />
+      <form onSubmit={connectToRoom} noValidate autoComplete="off" fullWidth>
+        <TextField
+          label="room's number"
+          variant="outlined"
+          name="roomId"
+          id="roomId"
+          type="text"
+          value={roomId}
+          onChange={onInputHandler}
+        />
       </form>
     </>
   );
