@@ -1,5 +1,4 @@
 import React from 'react';
-
 import CreateNewRoom from 'Components/CreateNewRoom/';
 import JoinRoom from 'Components/JoinRoom/JoinRoom';
 import Grid from '@material-ui/core/Grid';
@@ -21,7 +20,7 @@ const GlobalCss = withStyles({
   },
 })(() => null);
 
-const Home = ({ onclickFn }) => {
+const Home = () => {
   const classes = StyleHome();
   return (
     <div>
@@ -73,21 +72,7 @@ const Home = ({ onclickFn }) => {
               <Grid item sm={5} xs={4}>
                 <CreateNewRoom />
               </Grid>
-              <Grid item sm={2} xs={4} className={classes.game__wrapper__footer_button}>
-                <JoinRoom />
-              </Grid>
-              <Grid item sm={5} xs={4}>
-                <Button
-                  variant="contained"
-                  color="primary"
-                  disableElevation
-                  fullWidth
-                  className={classes.game__wrapper__footer_button}
-                  type="submit"
-                >
-                  JOIN SESSION
-                </Button>
-              </Grid>
+              <JoinRoom />
             </Grid>
           </Grid>
         </Grid>
