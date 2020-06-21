@@ -4,12 +4,33 @@ import Grid from '@material-ui/core/Grid';
 import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
 import StyleHome from './Style/StyleHome';
+import { withStyles } from '@material-ui/core/styles';
+
+const GlobalCss = withStyles({
+  // @global is handled by jss-plugin-global.
+  '@global': {
+    // You should target [class*="MuiButton-root"] instead if you nest themes.
+    '.MuiFormLabel-root': {
+      color: '#FFFF',
+    },
+    '.MuiOutlinedInput-notchedOutline': {
+      borderColor: '#64DD17',
+    },
+    '.MuiCheckbox-root': {
+      color: '#64DD17',
+    },
+    '.MuiLink-underlineNone': {
+      underline: 'none',
+    },
+  },
+})(() => null);
 
 const Home = () => {
   const classes = StyleHome();
   return (
     <div>
       <Grid container className={classes.grid}>
+        <GlobalCss />
         <Grid container item sm={8} xs={12} className={classes.root}>
           <Grid container item sm={12} xs={12} className={classes.header}>
             <Grid item sm={2} xs={12} className={classes.header__avatar}>
