@@ -40,13 +40,14 @@ const JoinRoom = () => {
                 margin="none"
                 size="small"
                 label="room's number"
-                placeholder="roomId"
+                placeholder="room's number"
                 variant="outlined"
                 name="roomId"
                 id="roomId"
                 type="text"
                 inputRef={register}
                 fullWidth
+                error={!!errors.roomId}
               />
             </Grid>
 
