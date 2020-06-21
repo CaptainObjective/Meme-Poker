@@ -1,5 +1,4 @@
 import React from 'react';
-import CreateNewRoom from 'Components/CreateNewRoom/';
 import JoinRoom from 'Components/JoinRoom/JoinRoom';
 import Grid from '@material-ui/core/Grid';
 import Avatar from '@material-ui/core/Avatar';
@@ -52,12 +51,7 @@ const Home = () => {
                 </Typography>
               </Grid>
             </Grid>
-            <Grid spacing={1} container item sm={10} xs={12} className={classes.game__wrapper__footer}>
-              <Grid item sm={5} xs={4}>
-                <CreateNewRoom />
-              </Grid>
-              <JoinRoom />
-            </Grid>
+            <JoinRoom />
           </Grid>
         </Grid>
       </Grid>
