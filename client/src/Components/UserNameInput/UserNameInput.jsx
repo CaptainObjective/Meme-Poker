@@ -16,7 +16,11 @@ const UserNameInput = () => {
     sendName({ name, roomId });
     history.push(`/room/${roomId}`);
   };
-  const onInputHandler = ({ target: { value } }) => setName(value);
+  const onInputHandler = ({ data }) => setName(data);
+
+  const onchange = (e) => {
+    setName(e.target.value);
+  };
 
   return (
     <form onSubmit={onSubmitHandler}>

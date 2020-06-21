@@ -16,17 +16,14 @@ let Schema = yup.object().shape({
 
 const JoinRoom = () => {
   const classes = StyleHome();
-  const [roomId, setRoomId] = useState('');
   const { push } = useHistory();
   const { register, handleSubmit, errors } = useForm({
     validationSchema: Schema,
   });
 
-  const onInputHandler = ({ target: { value } }) => setRoomId(value);
+  // console.log(onInputHandler);
 
-  console.log(onInputHandler);
-
-  const connectToRoom = () => {
+  const connectToRoom = ({ roomId }) => {
     push(`/room/${roomId}/join`);
   };
 
@@ -37,37 +34,36 @@ const JoinRoom = () => {
           <CreateNewRoom />
         </Grid>
         <Grid item sm={7} xs={6} className={classes.game__wrapper__footer_button}>
-          <form onSubmit={handleSubmit(onInputHandler)} Validate autoComplete="off">
-            <TextField
-              margin="none"
-              size="small"
-              label="room's number"
-              placeholder="roomId"
-              variant="outlined"
-              name="roomId"
-              id="roomId"
-              type="text"
-              value={roomId}
-              onChange={onInputHandler}
-              inputRef={register}
-              error={!!errors.roomId}
-              fullWidth
-            />
+          <form onSubmit={handleSubmit(connectToRoom)} autoComplete="off">
+            <Grid item sm={12} xs={12}>
+              <TextField
+                margin="none"
+                size="small"
+                label="room's number"
+                placeholder="roomId"
+                variant="outlined"
+                name="roomId"
+                id="roomId"
+                type="text"
+                inputRef={register}
+                fullWidth
+              />
+            </Grid>
+
+            <Grid item sm={12} xs={12}>
+              <Button
+                variant="contained"
+                color="primary"
+                disableElevation
+                fullWidth
+                className={classes.game__wrapper__footer_button}
+                type="submit"
+              >
+                JOIN SESSION
+              </Button>
+            </Grid>
           </form>
         </Grid>
-      </Grid>
-      <Grid item sm={10} xs={12}>
-        <Button
-          variant="contained"
-          color="primary"
-          disableElevation
-          fullWidth
-          className={classes.game__wrapper__footer_button}
-          type="submit"
-          onClick={() => connectToRoom()}
-        >
-          JOIN SESSION
-        </Button>
       </Grid>
     </>
   );

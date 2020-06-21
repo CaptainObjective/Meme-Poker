@@ -61,13 +61,18 @@ const StyleHome = makeStyles((theme) => ({
     alignItems: 'center',
   },
 
-  game__wrapper__header__text: {
+  game__wrapper__header__textL: {
     color: '#FFFF',
     display: 'flex',
     justifyContent: 'center',
     textAlign: 'center',
-    border: `1px solid ${theme.palette.primary.main}`,
-    borderRadius: '4px',
+    borderRight: `1px solid ${theme.palette.primary.main}`,
+  },
+  game__wrapper__header__textR: {
+    color: '#FFFF',
+    display: 'flex',
+    justifyContent: 'center',
+    textAlign: 'center',
   },
   game__wrapper__header__text_up: {
     color: '#FFFF',
@@ -85,7 +90,8 @@ const StyleHome = makeStyles((theme) => ({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  game__wrapper__footer_button: { color: '#FFFF' },
+  game__wrapper__footer_button: { color: '#FFFF', marginTop: '5px' },
+  link: { underline: 'none' },
 }));
 
 export default StyleHome;

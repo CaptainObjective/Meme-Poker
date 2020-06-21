@@ -41,12 +41,12 @@ const Home = () => {
             </Grid>
             <Grid container item spacing={1} sm={10} xs={12}>
               <Grid item sm={5} xs={5} className={classes.game__wrapper___text}>
-                <Typography className={classes.game__wrapper__header__text} variant="subtitle1">
+                <Typography className={classes.game__wrapper__header__textL} variant="subtitle1">
                   CREATE NEW SESSION
                 </Typography>
               </Grid>
               <Grid item sm={7} xs={7} className={classes.game__wrapper__text}>
-                <Typography className={classes.game__wrapper__header__text} variant="subtitle1">
+                <Typography className={classes.game__wrapper__header__textR} variant="subtitle1">
                   ADD ROOM'S NUMBER
                 </Typography>
               </Grid>
