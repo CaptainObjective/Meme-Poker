@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import VoteButton from 'Components/VoteButton/index.js';
+import VoteButton from 'Components/VoteButton';
 import CreateNewRoomStyles from './CreateNewRoomStyles';
 
 const CreateNewRoom = () => {
