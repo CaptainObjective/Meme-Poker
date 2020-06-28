@@ -5,6 +5,9 @@ const CardStyles = makeStyles(theme => ({
     display: 'grid',
     gridTemplateColumns: 'repeat(7, 1fr)',
     gridGap: theme.spacing(1),
+    [theme.breakpoints.down('xs')]: {
+      gridTemplateColumns: 'repeat(2, 1fr)',
+    },
   },
   main: {
     backgroundColor: 'black',
