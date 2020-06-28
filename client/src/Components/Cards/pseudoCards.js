@@ -1,76 +1,75 @@
-const imgSrc = 'https://picsum.photos/150/160';
+import img1 from '../../assets/img1.png';
+import img2 from '../../assets/img2.png';
 
-const pseudoCards = [
+export const pseudoCards = [
   {
     id: 1,
-    value: '9999',
-    img: imgSrc,
+    value: '40',
+    img: img1,
   },
   {
     id: 2,
-    value: '9998',
-    img: imgSrc,
+    value: '2',
+    img: img2,
   },
   {
     id: 3,
-    value: '9997',
-    img: imgSrc,
+    value: '?',
+    img: img1,
   },
   {
     id: 4,
-    value: '????',
-    img: imgSrc,
+    value: 'C',
+    img: img2,
   },
   {
     id: 5,
-    value: '2020',
-    img: imgSrc,
+    value: '1',
+    img: img1,
   },
   {
     id: 6,
-    value: '8888',
-    img: imgSrc,
+    value: '-50',
+    img: img2,
   },
   {
     id: 7,
-    value: '5555',
-    img: imgSrc,
+    value: '3',
+    img: img1,
   },
   {
     id: 8,
-    value: '0000',
-    img: imgSrc,
+    value: 'Ujdzie',
+    img: img2,
   },
   {
     id: 9,
-    value: '1000',
-    img: imgSrc,
+    value: '-1000',
+    img: img1,
   },
   {
     id: 10,
-    value: '1200',
-    img: imgSrc,
+    value: '13',
+    img: img2,
   },
   {
     id: 11,
-    value: '1300',
-    img: imgSrc,
+    value: '0',
+    img: img2,
   },
   {
     id: 12,
-    value: '0101',
-    img: imgSrc,
+    value: 'Wyjebane',
+    img: img1,
   },
   {
     id: 13,
-    value: '2222',
-    img: imgSrc,
+    value: '100',
+    img: img2,
   },
   {
     id: 14,
     value: '8',
-    img: imgSrc,
+    img: img1,
   },
 ];
-
-export default pseudoCards;

@@ -10,8 +10,8 @@ import PromotedText from 'Components/PromotedText/PromotedText';
 import ContainerApp from 'Components/ContainerApp';
 import UserNameStyles from './UserNameStyles';
 import VoteButton from 'Components/VoteButton';
-import photo1 from '../../assets/pngfind.com-meme-faces-png-13834.png';
-import photo2 from '../../assets/pngfind.com-memes-png-401574.png';
+import photo1 from '../../assets/img1.png';
+import photo2 from '../../assets/img2.png';
 
 const yup = require('yup');
 
