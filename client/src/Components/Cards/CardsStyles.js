@@ -9,16 +9,17 @@ const CardStyles = makeStyles(theme => ({
   main: {
     backgroundColor: 'black',
     padding: 5,
-    height: 118,
   },
   media: {
     backgroundColor: '#FFFF',
     marginBottom: '5px',
     borderRadius: '3px',
+    height: 60,
+    padding: '1px',
   },
 
   content: {
-    height: 50,
+    height: 40,
     backgroundColor: theme.palette.primary.main,
     borderRadius: '5px',
     padding: '5px',

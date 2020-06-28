@@ -1,5 +1,17 @@
-import img1 from '../../assets/img1.png';
-import img2 from '../../assets/img2.png';
+import img1 from '../../assets/memy_cards/1.jpg';
+import img2 from '../../assets/memy_cards/2.jpg';
+import img3 from '../../assets/memy_cards/3.jpg';
+import img4 from '../../assets/memy_cards/4.jpg';
+import img5 from '../../assets/memy_cards/5.jpg';
+import img6 from '../../assets/memy_cards/6.jpg';
+import img7 from '../../assets/memy_cards/7.jpg';
+import img8 from '../../assets/memy_cards/8.jpg';
+import img9 from '../../assets/memy_cards/9.jpg';
+import img10 from '../../assets/memy_cards/10.jpg';
+import img11 from '../../assets/memy_cards/11.jpg';
+import img12 from '../../assets/memy_cards/12.jpg';
+import img13 from '../../assets/memy_cards/13.jpg';
+import img14 from '../../assets/memy_cards/14.jpg';
 
 export const pseudoCards = [
   {
@@ -15,61 +27,61 @@ export const pseudoCards = [
   {
     id: 3,
     value: '?',
-    img: img1,
+    img: img3,
   },
   {
     id: 4,
     value: 'C',
-    img: img2,
+    img: img4,
   },
   {
     id: 5,
     value: '1',
-    img: img1,
+    img: img5,
   },
   {
     id: 6,
     value: '-50',
-    img: img2,
+    img: img6,
   },
   {
     id: 7,
     value: '3',
-    img: img1,
+    img: img7,
   },
   {
     id: 8,
     value: 'Ujdzie',
-    img: img2,
+    img: img8,
   },
   {
     id: 9,
     value: '-1000',
-    img: img1,
+    img: img9,
   },
   {
     id: 10,
     value: '13',
-    img: img2,
+    img: img10,
   },
   {
     id: 11,
     value: '0',
-    img: img2,
+    img: img11,
   },
   {
     id: 12,
     value: 'Wyjebane',
-    img: img1,
+    img: img12,
   },
   {
     id: 13,
     value: '100',
-    img: img2,
+    img: img13,
   },
   {
     id: 14,
     value: '8',
-    img: img1,
+    img: img14,
   },
 ];

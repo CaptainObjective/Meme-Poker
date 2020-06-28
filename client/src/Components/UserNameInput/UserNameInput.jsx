@@ -11,7 +11,7 @@ import ContainerApp from 'Components/ContainerApp';
 import UserNameStyles from './UserNameStyles';
 import VoteButton from 'Components/VoteButton';
 import photo1 from '../../assets/img1.png';
-import photo2 from '../../assets/img2.png';
+import photo2 from '../../assets/img2.jpg';
 
 const yup = require('yup');
 
