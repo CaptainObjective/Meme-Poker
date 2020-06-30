@@ -7,7 +7,7 @@ const Header = () => {
   const classes = HeaderStyles();
 
   return (
-    <Box className={classes.box}>
+    <Box className={classes.root}>
       <img className={classes.img} src={Logo} alt="logo"></img>
     </Box>
   );
