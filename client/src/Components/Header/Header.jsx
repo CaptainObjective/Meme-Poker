@@ -1,5 +1,7 @@
 import React from 'react';
 import { Box } from '@material-ui/core';
+import { Link } from 'react-router-dom';
+
 import HeaderStyles from './HeaderStyles';
 import Logo from 'Assets/Images/logo.png';
 
@@ -8,7 +10,9 @@ const Header = () => {
 
   return (
     <Box className={classes.root}>
-      <img className={classes.img} src={Logo} alt="logo"></img>
+      <Link to="/">
+        <img className={classes.img} src={Logo} alt="logo" />
+      </Link>
     </Box>
   );
 };
