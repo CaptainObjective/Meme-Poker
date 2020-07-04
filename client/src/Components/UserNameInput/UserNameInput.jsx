@@ -8,7 +8,7 @@ import TextField from '@material-ui/core/TextField';
 import { useUserContext } from 'Contexts/UserContext';
 import PromotedText from 'Components/PromotedText/PromotedText';
 import MainBox from 'Components/MainBox';
-import UserNameStyles from './UserNameStyles';
+import userNameStyles from './UserNameStyles';
 import VoteButton from 'Components/VoteButton';
 import photo1 from 'Assets/pngfind.com-meme-faces-png-13834.png';
 import photo2 from 'Assets/pngfind.com-memes-png-401574.png';
@@ -19,7 +19,7 @@ const Schema = yup.object().shape({
   name: yup.string().required(),
 });
 const UserNameInput = () => {
-  const classes = UserNameStyles();
+  const classes = userNameStyles();
   const { upsertRoomInfo } = useUserContext();
   const { roomId } = useParams();
   const history = useHistory();

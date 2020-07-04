@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/core/styles';
 
-const PromotedTextStyles = makeStyles(theme => ({
+const promotedTextStyles = makeStyles(theme => ({
   paper: {
     backgroundColor: theme.palette.secondary.light,
     padding: theme.spacing(0.5, 0, 0.5, 0),
@@ -12,4 +12,4 @@ const PromotedTextStyles = makeStyles(theme => ({
   },
 }));
 
-export default PromotedTextStyles;
+export default promotedTextStyles;

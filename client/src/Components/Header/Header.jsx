@@ -2,11 +2,11 @@ import React from 'react';
 import { Box } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 
-import HeaderStyles from './HeaderStyles';
+import headerStyles from './HeaderStyles';
 import Logo from 'Assets/Images/logo.png';
 
 const Header = () => {
-  const classes = HeaderStyles();
+  const classes = headerStyles();
 
   return (
     <Box className={classes.root}>

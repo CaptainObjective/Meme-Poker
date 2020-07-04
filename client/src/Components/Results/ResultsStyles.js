@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/core/styles';
 
-const ResultsStyles = makeStyles(theme => ({
+const resultsStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
     flexFlow: 'column nowrap',
@@ -32,4 +32,4 @@ const ResultsStyles = makeStyles(theme => ({
   },
 }));
 
-export default ResultsStyles;
+export default resultsStyles;

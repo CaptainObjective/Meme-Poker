@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/core/styles';
 
-const CreateNewRoomStyles = makeStyles(theme => ({
+const createNewRoomStyles = makeStyles(theme => ({
   link: {
     textDecoration: 'none',
   },
@@ -9,4 +9,4 @@ const CreateNewRoomStyles = makeStyles(theme => ({
     textDecoration: 'none',
   },
 }));
-export default CreateNewRoomStyles;
+export default createNewRoomStyles;

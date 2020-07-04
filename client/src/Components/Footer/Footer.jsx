@@ -1,9 +1,9 @@
 import React from 'react';
 
-import FooterStyles from './FooterStyles';
+import footerStyles from './FooterStyles';
 
 const Footer = () => {
-  const classes = FooterStyles();
+  const classes = footerStyles();
 
   return <div className={classes.footer}>Footer</div>;
 };

@@ -2,7 +2,7 @@ import { InputLabel, InputBase } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { withStyles } from '@material-ui/styles';
 
-const TaskNameInputStyles = makeStyles(theme => ({
+const taskNameInputStyles = makeStyles(theme => ({
   root: {
     width: '100%',
     backgroundColor: theme.palette.primary.main,
@@ -51,4 +51,4 @@ const CustomInput = withStyles(theme => ({
   },
 }))(InputBase);
 
-export { TaskNameInputStyles, CustomLabel, CustomInput };
+export { taskNameInputStyles, CustomLabel, CustomInput };

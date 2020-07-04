@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/core/styles';
 
-const JoinRoomStyles = makeStyles(theme => ({
+const joinRoomStyles = makeStyles(theme => ({
   formWrapper: {
     display: 'flex',
     flexDirection: 'row',
@@ -27,4 +27,4 @@ const JoinRoomStyles = makeStyles(theme => ({
   },
 }));
 
-export default JoinRoomStyles;
+export default joinRoomStyles;

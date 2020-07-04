@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/core/styles';
 
-const UserNameStyles = makeStyles(theme => ({
+const userNameStyles = makeStyles(theme => ({
   wrapper: {
     display: 'flex',
     flexDirection: 'column',
@@ -48,4 +48,4 @@ const UserNameStyles = makeStyles(theme => ({
   wrapperButton: { width: '20em', justifyContent: 'center' },
 }));
 
-export default UserNameStyles;
+export default userNameStyles;

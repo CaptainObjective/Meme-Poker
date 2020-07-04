@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/core/styles';
 
-const CardStyles = makeStyles(theme => ({
+const cardStyles = makeStyles(theme => ({
   root: {
     display: 'grid',
     gridTemplateColumns: 'repeat(7, 1fr)',
@@ -11,4 +11,4 @@ const CardStyles = makeStyles(theme => ({
   },
 }));
 
-export default CardStyles;
+export default cardStyles;

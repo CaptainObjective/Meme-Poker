@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { Box, Typography, Avatar } from '@material-ui/core';
 
-import UserVotesStyles from './UserVotesStyles';
+import userVotesStyles from './UserVotesStyles';
 import { useSocket } from 'socketio-hooks';
 
 const UserVotes = () => {
-  const classes = UserVotesStyles();
+  const classes = userVotesStyles();
   const [users, setUsers] = useState([]);
 
   useSocket('USER_JOINED', users => {

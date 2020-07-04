@@ -2,10 +2,10 @@ import React from 'react';
 import { Box, Button } from '@material-ui/core';
 import SendIcon from '@material-ui/icons/Send';
 
-import { TaskNameInputStyles, CustomLabel, CustomInput } from './TaskNameInputStyles';
+import { taskNameInputStyles, CustomLabel, CustomInput } from './TaskNameInputStyles';
 
 const TaskNameInput = () => {
-  const classes = TaskNameInputStyles();
+  const classes = taskNameInputStyles();
 
   return (
     <Box className={classes.root} mb={2}>

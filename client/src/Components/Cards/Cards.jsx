@@ -2,10 +2,10 @@ import React from 'react';
 
 import Card from 'Components/Card';
 import pseudoCards from './pseudoCards';
-import CardStyles from './CardsStyles';
+import cardStyles from './CardsStyles';
 
 const Cards = () => {
-  const classes = CardStyles();
+  const classes = cardStyles();
 
   return (
     <div className={classes.root}>

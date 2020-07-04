@@ -2,19 +2,15 @@ import React from 'react';
 import { Container, Box } from '@material-ui/core';
 
 import Header from 'Components/Header/Header';
-// import Footer from 'Components/Footer/Footer';
-import TemplateStyles from './TemplateStyles';
+import templateStyles from './TemplateStyles';
 
 const Template = props => {
-  const classes = TemplateStyles();
+  const classes = templateStyles();
 
   return (
     <Box className={classes.root}>
       <Header />
-      <Container>
-        {props.children}
-        {/* <Footer /> */}
-      </Container>
+      <Container>{props.children}</Container>
     </Box>
   );
 };

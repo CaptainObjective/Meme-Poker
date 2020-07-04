@@ -3,13 +3,13 @@ import { Avatar, Paper, Typography } from '@material-ui/core';
 import { useParams } from 'react-router-dom';
 
 import { useUserContext } from 'Contexts/UserContext';
-import UserBoxStyles from './UserBoxStyles';
+import userBoxStyles from './UserBoxStyles';
 
 const UserBox = ({ head, text }) => {
   const { getUserName } = useUserContext();
   const { roomId } = useParams();
 
-  const classes = UserBoxStyles();
+  const classes = userBoxStyles();
   const name = getUserName(roomId);
 
   return (

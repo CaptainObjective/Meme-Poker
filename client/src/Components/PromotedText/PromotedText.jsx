@@ -1,9 +1,9 @@
 import React from 'react';
 import { Paper, Typography } from '@material-ui/core';
-import PromotedTextStyles from './PromotedTextStyles';
+import promotedTextStyles from './PromotedTextStyles';
 
 const PromotedText = ({ text }) => {
-  const classes = PromotedTextStyles();
+  const classes = promotedTextStyles();
 
   return (
     <Paper elevation={3} className={classes.paper}>

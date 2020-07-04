@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/core/styles';
 
-const ContainerAppStyles = makeStyles(theme => ({
+const mainBoxStyles = makeStyles(theme => ({
   root: {
     backgroundColor: theme.palette.grey.A400,
     padding: theme.spacing(3),
@@ -11,4 +11,4 @@ const ContainerAppStyles = makeStyles(theme => ({
   },
 }));
 
-export default ContainerAppStyles;
+export default mainBoxStyles;

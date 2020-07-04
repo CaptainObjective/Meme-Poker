@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/core/styles';
 
-const UserBoxStyles = makeStyles(theme => ({
+const userBoxStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
     alignItems: 'center',
@@ -18,4 +18,4 @@ const UserBoxStyles = makeStyles(theme => ({
   },
 }));
 
-export default UserBoxStyles;
+export default userBoxStyles;

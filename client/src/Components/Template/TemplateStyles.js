@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/core/styles';
 
-const TemplateStyles = makeStyles(theme => ({
+const templateStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
     flexDirection: 'column',
@@ -8,4 +8,4 @@ const TemplateStyles = makeStyles(theme => ({
   },
 }));
 
-export default TemplateStyles;
+export default templateStyles;

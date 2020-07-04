@@ -2,7 +2,7 @@ import React from 'react';
 import { useHistory } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 
-import JoinRoomStyles from './JoinRoomStyles';
+import joinRoomStyles from './JoinRoomStyles';
 import VoteButton from 'Components/VoteButton';
 
 import TextField from '@material-ui/core/TextField';
@@ -14,7 +14,7 @@ const Schema = yup.object().shape({
 });
 
 const JoinRoom = () => {
-  const classes = JoinRoomStyles();
+  const classes = joinRoomStyles();
   const { register, handleSubmit, errors } = useForm({
     validationSchema: Schema,
   });

@@ -1,10 +1,10 @@
 import React from 'react';
 import { Paper, Typography } from '@material-ui/core';
 
-import InfoBoxStyles from './InfoBoxStyles';
+import infoBoxStyles from './InfoBoxStyles';
 
 const InfoBox = ({ title, value }) => {
-  const classes = InfoBoxStyles();
+  const classes = infoBoxStyles();
 
   return (
     <Paper elevation={0} className={classes.root}>

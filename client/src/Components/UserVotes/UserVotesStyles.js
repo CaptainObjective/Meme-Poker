@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/styles';
 
-const UserVotesStyles = makeStyles(theme => ({
+const userVotesStyles = makeStyles(theme => ({
   root: {
     width: '100%',
     marginBottom: theme.spacing(2),
@@ -24,4 +24,4 @@ const UserVotesStyles = makeStyles(theme => ({
   },
 }));
 
-export default UserVotesStyles;
+export default userVotesStyles;

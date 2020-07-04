@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/core/styles';
 
-const InfoBoxStyles = makeStyles(theme => ({
+const infoBoxStyles = makeStyles(theme => ({
   root: {
     border: `2px solid ${theme.palette.primary.main}`,
     padding: theme.spacing(0.25),
@@ -12,4 +12,4 @@ const InfoBoxStyles = makeStyles(theme => ({
   },
 }));
 
-export default InfoBoxStyles;
+export default infoBoxStyles;

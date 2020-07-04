@@ -3,10 +3,10 @@ import { Paper, Typography, Box } from '@material-ui/core';
 
 import UserVotes from 'Components/UserVotes';
 import VoteBtn from 'Components/VoteButton';
-import ResultsStyles from './ResultsStyles';
+import resultsStyles from './ResultsStyles';
 
 const Results = () => {
-  const classes = ResultsStyles();
+  const classes = resultsStyles();
 
   return (
     <Paper className={classes.root}>

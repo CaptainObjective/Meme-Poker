@@ -2,10 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import VoteButton from 'Components/VoteButton/index.js';
-import CreateNewRoomStyles from './CreateNewRoomStyles';
+import createNewRoomStyles from './CreateNewRoomStyles';
 
 const CreateNewRoom = () => {
-  const classes = CreateNewRoomStyles();
+  const classes = createNewRoomStyles();
   const sessionNumber = Math.round(Math.random() * 100);
 
   return (
