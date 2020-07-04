@@ -1,16 +1,19 @@
 import React from 'react';
 
+import cardsStyles from './CardsStyles';
+import { cardsSchema } from './cardsSchema';
 import Card from 'Components/Card';
-import pseudoCards from './pseudoCards';
-import cardStyles from './CardsStyles';
+
+//To oczywiście będzie trzeba zastąpić
+// const bonifacyNumbers = [1, 2, 3, 5, 8, 13, 21, 34];
 
 const Cards = () => {
-  const classes = cardStyles();
+  const classes = cardsStyles();
 
   return (
     <div className={classes.root}>
-      {pseudoCards.map(card => (
-        <Card key={card.id} value={card.value} img={card.img} />
+      {cardsSchema.map(({ id, ...rest }) => (
+        <Card key={id} {...rest} />
       ))}
     </div>
   );

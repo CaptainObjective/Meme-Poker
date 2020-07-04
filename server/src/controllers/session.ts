@@ -8,7 +8,9 @@ interface Query {
 }
 
 router.get('/', async (req: Request<any, any, any, Query>, res: Response) => {
-  const { roomId } = req.query;
+  let { roomId } = req.query;
+
+  roomId = typeof roomId === 'string' ? parseInt(roomId, 10) : roomId;
 
   if (typeof roomId !== 'number') return res.status(400).json({ error: 'Invalid parameter' });
 
