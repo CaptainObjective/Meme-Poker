@@ -34,19 +34,19 @@ app.use(express.json({ limit: '50mb' }));
 app.use(cookieParser());
 app.use(router);
 
-app.use(
-  morgan(
-    {
-      collection: 'error_logger',
-      connectionString: dbKey?.toString(),
-      // user: 'admin',
-      // pass: 'pass',
-    },
-    {
-      skip: function (req: Request, res: Response) {
-        return res.status < 400;
-      },
-    },
-    'dev'
-  )
-);
+// app.use(
+//   morgan(
+//     {
+//       collection: 'error_logger',
+//       connectionString: dbKey,
+//       // user: 'admin',
+//       // pass: 'pass',
+//     },
+//     {
+//       // skip: function (req: Request, res: Response) {
+//       //   return res.status < 400;
+//       // },
+//     },
+//     'dev'
+//   )
+// );\
