@@ -1,5 +1,6 @@
 import * as socketio from 'socket.io';
 import { rooms } from '@models/Rooms';
+import { socketError } from 'middleware/error';
 
 interface NewTask {
   task: string;
@@ -22,6 +23,7 @@ const onNewTask = (io: socketio.Server, socket: socketio.Socket) => ({ roomId, t
     io.to(roomId).emit('TASK_UPDATED', room.getTask());
   } catch (ex) {
     console.error(ex);
+    socket.on('ERROR', socketError(io, socket));
   }
 };
 

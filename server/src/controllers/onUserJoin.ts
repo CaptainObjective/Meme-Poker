@@ -2,6 +2,7 @@ import * as socketio from 'socket.io';
 
 import { User } from '@models/User';
 import { rooms } from '@models/Rooms';
+import { socketError } from 'middleware/error';
 
 interface UserJoinPayload {
   name: string;
@@ -22,6 +23,7 @@ const onUserJoin = (io: socketio.Server, socket: socketio.Socket) => ({ name, ro
     io.to(roomId).emit('FEED', message);
   } catch (ex) {
     console.error(ex);
+    socket.on('ERROR', socketError(io, socket));
   }
 };
 

@@ -1,12 +1,11 @@
 import { Router } from 'express';
 import { sessionController } from '@controllers/session';
-
-const error = require('../middleware/error');
+import { restError } from 'middleware/error';
 
 const router = Router();
 
 router.use('/session', sessionController);
 
-router.use(error);
+router.use(restError);
 
 export { router as apiController };

@@ -1,5 +1,6 @@
 import * as socketio from 'socket.io';
 import { rooms } from '@models/Rooms';
+import { socketError } from 'middleware/error';
 
 interface UserVotePayload {
   name: string;
@@ -31,6 +32,7 @@ const onUserVote = (io: socketio.Server, socket: socketio.Socket) => ({ name, va
     io.to(roomId).emit('FEED', message);
   } catch (ex) {
     console.error(ex);
+    socket.on('ERROR', socketError(io, socket));
   }
 };
 export { onUserVote };

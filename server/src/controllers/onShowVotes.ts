@@ -1,5 +1,6 @@
 import * as socketio from 'socket.io';
 import { rooms } from '@models/Rooms';
+import { socketError } from 'middleware/error';
 
 const onShowVotes = (io: socketio.Server, socket: socketio.Socket) => (roomId: string) => {
   try {
@@ -10,6 +11,7 @@ const onShowVotes = (io: socketio.Server, socket: socketio.Socket) => (roomId: s
     io.to(roomId).emit('FEED', message);
   } catch (ex) {
     console.error(ex);
+    socket.on('ERROR', socketError(io, socket));
   }
 };
 

@@ -1,5 +1,6 @@
 import * as socketio from 'socket.io';
 import { rooms } from '@models/Rooms';
+import { socketError } from 'middleware/error';
 
 const onSubmitEstimation = (io: socketio.Server, socket: socketio.Socket) => (roomId: string) => {
   try {
@@ -13,6 +14,7 @@ const onSubmitEstimation = (io: socketio.Server, socket: socketio.Socket) => (ro
     io.to(roomId).emit('FEED', message);
   } catch (ex) {
     console.error(ex);
+    socket.on('ERROR', socketError(io, socket));
   }
 };
 export { onSubmitEstimation };
