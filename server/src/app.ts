@@ -7,8 +7,6 @@ import * as cookieParser from 'cookie-parser';
 import { socketController } from './routes/socket';
 import { router } from 'routes';
 
-const morgan = require('mongoose-morgan');
-
 dotenv.config();
 
 const app = express();
