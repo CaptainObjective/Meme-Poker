@@ -4,6 +4,7 @@ import CreateNewRoom from 'Components/CreateNewRoom/';
 import JoinRoom from 'Components/JoinRoom/JoinRoom';
 import MainBox from 'Components/MainBox';
 import PromotedText from 'Components/PromotedText';
+import ErrorBox from 'Components/ErrorBox'
 import WelcomeBox from 'Components/WelcomeBox';
 import { Typography } from '@material-ui/core';
 import Divider from '@material-ui/core/Divider';
@@ -18,6 +19,7 @@ const Home = () => {
         </div>
         <div className={classes.wrapperItem}>
           <PromotedText text={'POINTING SESSION'} />
+          <ErrorBox />
         </div>
         <div className={classes.wrapperItem}>
           <div className={classes.wrapperItemColumn}>
