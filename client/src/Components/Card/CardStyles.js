@@ -9,7 +9,6 @@ const cardStyles = makeStyles(theme => ({
     backgroundColor: 'yellow',
     padding: 5,
     transform: 'scale(1.2)',
-
   },
   media: {
     backgroundColor: '#FFFF',

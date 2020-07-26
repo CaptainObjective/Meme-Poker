@@ -18,7 +18,6 @@ const HistoryElement = ({ title, finalResult, estimationTime, analysis, results 
   return (
     <>
       <StyledTableRow onClick={() => setOpen(!open)}>
-
         <MainTableCell>
           <IconButton className={classes.arrowIcon} aria-label="expand row" size="small" onClick={() => setOpen(!open)}>
             {open ? <ExpandLessIcon /> : <ExpandMoreIcon />}
@@ -66,7 +65,6 @@ const HistoryElement = ({ title, finalResult, estimationTime, analysis, results 
         </StyledTableCell>
       </TableRow>
     </>
-
   );
 };
 
