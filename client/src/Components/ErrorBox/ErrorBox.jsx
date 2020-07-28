@@ -4,10 +4,13 @@ import MuiAlert from '@material-ui/lab/Alert';
 import CloseIcon from '@material-ui/icons/Close';
 import { useSocket } from 'socketio-hooks';
 
-const ErrorBox = props => {
+import { useRoomContext } from 'Contexts/RoomContext';
+
+const ErrorBox = () => {
   const [snackPack, setSnackPack] = useState([]);
   const [open, setOpen] = useState(false);
   const [error, setError] = useState(undefined);
+  const { errorMsg } = useRoomContext();
 
   useEffect(() => {
     if (snackPack.length && !error) {
@@ -30,8 +33,18 @@ const ErrorBox = props => {
   };
 
   useSocket('EXCEPTION', message => {
-    setSnackPack(prev => [...prev, { message, key: new Date().getTime() }]);
+    sendError(message);
   });
+
+  const sendError = message => {
+    setSnackPack(prev => [...prev, { message, key: new Date().getTime() }]);
+  };
+
+  useEffect(() => {
+    if (errorMsg) {
+      sendError(errorMsg);
+    }
+  }, [errorMsg]);
 
   return (
     <div>
